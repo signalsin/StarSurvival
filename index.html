@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+  <title>Star Survival</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1, IE=9">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="viewport" content="initial-scale=1 maximum-scale=1 user-scalable=0 minimal-ui" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
+  <script type="text/javascript" src="js/phaser-arcade-physics.min.js"></script>
+  <script type="text/javascript" src="js/powerup.js"></script>
+  <script type="text/javascript" src="js/player.js"></script>
+  <script type="text/javascript" src="js/enemyBasic.js"></script>
+  <script type="text/javascript" src="js/enemyBasicShooter.js"></script>
+  <script type="text/javascript" src="js/enemyFast.js"></script>
+  <script type="text/javascript" src="js/enemyFastShooter.js"></script>
+  <script type="text/javascript" src="js/enemyBoss.js"></script>
+  <script type="text/javascript" src="js/enemies.js"></script>
+  <script type="text/javascript" src="js/gameHelper.js"></script>
+  <script type="text/javascript" src="boot.js"></script>
+  <script type="text/javascript" src="preloader.js"></script>
+  <script type="text/javascript" src="menu.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  
+</head>
+    
+<body>
+
+    <div id="starSurvivalContainer"></div>
+    <div id="orientation"></div>
+
+    <script type="text/javascript">
+        
+    (function (cocoonjsphaser) {
+
+        cocoonjsphaser.utils = {
+            fixDOMParser: function () {
+                window.DOMParser = DOMishParser;
+            }
+    };
+
+    function DOMishParser() { }
+    DOMishParser.prototype.parseFromString = function (data) {
+        return new DOMishObject(JSON.parse(data));
+    };
+
+    function DOMishAttributes() { }
+    DOMishAttributes.prototype.getNamedItem = function (name) {
+        return {
+            nodeValue: this[name] || null
+        };
+    };
+
+    function makeDOMishObject(data) {
+        return new DOMishObject(data);
+    }
+
+    function DOMishObject(data) {
+        this.attributes = this.convertContent(data);
+        this.length = Object.keys(this.attributes).length;
+    }
+    DOMishObject.prototype.documentElement = document;
+    DOMishObject.prototype.convertContent = function (obj) {
+        var attributes = new DOMishAttributes(),
+            prop;
+
+        for (prop in obj) {
+            if (obj[prop] !== null && typeof obj[prop] === 'object') {
+                attributes[prop] = Array.isArray(obj[prop]) ?
+                    obj[prop].map(makeDOMishObject) : new DOMishObject(obj[prop]);
+            } else {
+                attributes[prop] = obj[prop];
+            }
+        }
+
+        return attributes;
+    };
+    DOMishObject.prototype.getElementsByTagName = function (name) {
+        return this.attributes[name] ?
+            Array.isArray(this.attributes[name]) ?
+            this.attributes[name] : [this.attributes[name]] : [];
+    };
+
+    DOMishObject.prototype.getAttribute = function (name) {
+        return this.attributes.getNamedItem(name).nodeValue;
+    };
+
+    }(window.cocoonjsphaser = window.cocoonjsphaser || {}));
+
+window.onload = function() {
+        
+    cocoonjsphaser.utils.fixDOMParser();
+      
+    var width = navigator.isCocoonJS ? window.innerWidth : 320;
+    var height = navigator.isCocoonJS ? window.innerHeight : 480;
+    var dips = window.devicePixelRatio;
+    width = width * dips;
+    height = height * dips;
+        
+    //	Create the Phaser game and inject it into the gameContainer div.
+    var game = new Phaser.Game(width, height, Phaser.CANVAS, 'starSurvivalContainer');
+
+    //	Add the States your game has.
+    //	You don't have to do this in the html, it could be done in your Boot state too, but for simplicity I'll keep it here.
+    game.state.add('Boot', Shmuppet.Boot);
+    game.state.add('Preloader', Shmuppet.Preloader);
+    game.state.add('MainMenu', Shmuppet.MainMenu);
+    game.state.add('Game', Shmuppet.Game);
+
+    //	Now start the Boot state.
+    game.state.start('Boot');
+
+    };
+        
+        
+
+    </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,1 @@
+This was my first complete game made with JavaScript. This uses the Phaser framework. It's perhaps a little rough around the edges, but I believe it's still a pretty solid first attempt.

@@ -1,0 +1,174 @@
+{"frames": [
+
+{
+	"filename": "bgTile",
+	"frame": {"x":2,"y":2,"w":256,"h":256},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":256},
+	"sourceSize": {"w":256,"h":256},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "btnTryAgain",
+	"frame": {"x":260,"y":2,"w":100,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
+	"sourceSize": {"w":100,"h":100},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "enemyBasic",
+	"frame": {"x":362,"y":2,"w":39,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":32},
+	"sourceSize": {"w":39,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "enemyBasicShooter",
+	"frame": {"x":403,"y":2,"w":39,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":32},
+	"sourceSize": {"w":39,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "enemyBoss",
+	"frame": {"x":444,"y":2,"w":57,"h":69},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":57,"h":69},
+	"sourceSize": {"w":57,"h":69},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "enemyFast",
+	"frame": {"x":503,"y":2,"w":35,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":32},
+	"sourceSize": {"w":35,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "enemyFastShooter",
+	"frame": {"x":540,"y":2,"w":35,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":32},
+	"sourceSize": {"w":35,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "explosion_particle",
+	"frame": {"x":577,"y":2,"w":5,"h":5},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":5,"h":5},
+	"sourceSize": {"w":5,"h":5},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "gameOver",
+	"frame": {"x":584,"y":2,"w":300,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":300,"h":150},
+	"sourceSize": {"w":300,"h":150},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "enemyBullet",
+	"frame": {"x":886,"y":2,"w":14,"h":5},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":5},
+	"sourceSize": {"w":14,"h":5},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "menuButton",
+	"frame": {"x":2,"y":260,"w":200,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":100},
+	"sourceSize": {"w":200,"h":100},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "playerBullet",
+	"frame": {"x":204,"y":260,"w":5,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":5,"h":20},
+	"sourceSize": {"w":5,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "playerBulletParticle",
+	"frame": {"x":211,"y":260,"w":2,"h":2},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":2,"h":2},
+	"sourceSize": {"w":2,"h":2},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "playerGhost_1",
+	"frame": {"x":215,"y":260,"w":38,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":29},
+	"sourceSize": {"w":38,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "playerGhost_2",
+	"frame": {"x":253,"y":260,"w":38,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":29},
+	"sourceSize": {"w":38,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "playerLife",
+	"frame": {"x":293,"y":260,"w":17,"h":13},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":13},
+	"sourceSize": {"w":17,"h":13},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "powerup_1",
+	"frame": {"x":312,"y":260,"w":17,"h":17},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":17},
+	"sourceSize": {"w":17,"h":17},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "powerup_2",
+	"frame": {"x":329,"y":260,"w":17,"h":17},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":17},
+	"sourceSize": {"w":17,"h":17},
+	"pivot": {"x":0.5,"y":0.5}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "sprites.png",
+	"format": "RGBA8888",
+	"size": {"w":1024,"h":512},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:daf1606e8af1996a34610a6018a71b6d:3147fc89fd59d39bde6729088992ef3b:1eabdf11f75e3a4fe3147baf7b5be24b$"
+}
+}
